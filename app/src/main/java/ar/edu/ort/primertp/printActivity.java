@@ -2,6 +2,7 @@ package ar.edu.ort.primertp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,25 +18,27 @@ public class printActivity extends AppCompatActivity {
             return;
         }
 
-        Persona p = (Persona)extras.getSerializable("pers1");
-        Persona pppp = (Persona)extras.getSerializable("pers2");
+        Persona p = (Persona) extras.getSerializable("pers1");
+        Persona Per = (Persona) extras.getSerializable("persona");
 
-        TextView nombreyapVw = (TextView)findViewById(R.id.nombreyapellido);
-        TextView sexoVw = (TextView)findViewById(R.id.sexo);
+
+        TextView nombreyapVw = (TextView) findViewById(R.id.nombreyapellido);
+        TextView sexoVw = (TextView) findViewById(R.id.sexo);
 
         try {
-            nombreyapVw.setText(p.imprimir());
+            nombreyapVw.setText(Per.imprimir());
         } catch (Exception e) {
-            Toast.makeText(this,e.getMessage(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
 
-        //String sexoStr = String.valueOf(p.getSexo());
-        String sexoStr;
-        if (p.getSexo() == Persona.FEMENINO)
-            sexoStr = "Femenino";
-        else
-            sexoStr = "Masculino";
-        sexoVw.setText(sexoStr);
 
+        String sexoStr;
+
+        if (p.getSexo() == p.FEMENINO)
+            sexoStr = "Sexo: Femenino";
+        else
+            sexoStr = "Sexo: Masculino";
+        sexoVw.setText(sexoStr);
     }
 }
+

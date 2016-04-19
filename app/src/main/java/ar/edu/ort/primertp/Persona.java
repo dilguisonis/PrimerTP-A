@@ -9,9 +9,9 @@ public class Persona implements Serializable {
     public static int MASCULINO=1;
     public static int FEMENINO=2;
 
-    private String nombre;
-    private String apellido;
-    private int sexo;
+    protected String nombre;
+    protected String apellido;
+    protected int sexo;
 
     public Persona(String nombre, String a, int sexo) {
         this.nombre = nombre;
@@ -24,7 +24,7 @@ public class Persona implements Serializable {
         if (nombre.isEmpty() || apellido.isEmpty())
             throw new Exception("Falta un dato");
 
-        return nombre + "," + apellido;
+        return "Nombre: " + nombre + "\n" + "Apellido: " + apellido;
 
     }
 

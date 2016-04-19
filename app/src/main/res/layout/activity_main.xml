@@ -41,6 +41,40 @@
                 android:onClick="eligeSexo"/>
         </RadioGroup>
 
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton android:id="@+id/profesor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profesor"
+                android:onClick="eligeProfesion"/>
+            <RadioButton android:id="@+id/alumno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alumno"
+                android:onClick="eligeProfesion"/>
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/materia"
+            android:visibility="invisible"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_blue_dark"
+            android:hint="Materia" />
+
+        <EditText
+            android:id="@+id/curso"
+            android:visibility="invisible"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_blue_dark"
+            android:hint="Curso" />
+
         <Button
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
